@@ -8,7 +8,7 @@ import edu.wpi.first.hal.SimDevice;
 import edu.wpi.first.hal.SimDevice.Direction;
 import edu.wpi.first.hal.SimDouble;
 
-public class RomiGyro {
+public class XRPGyro {
   private final SimDouble m_simRateX;
   private final SimDouble m_simRateY;
   private final SimDouble m_simRateZ;
@@ -21,8 +21,8 @@ public class RomiGyro {
   private double m_angleZOffset;
 
   /** Create a new RomiGyro. */
-  public RomiGyro() {
-    SimDevice gyroSimDevice = SimDevice.create("Gyro:RomiGyro");
+  public XRPGyro() {
+    SimDevice gyroSimDevice = SimDevice.create("Gyro:XRPGyro");
     if (gyroSimDevice != null) {
       gyroSimDevice.createBoolean("init", Direction.kOutput, true);
       m_simRateX = gyroSimDevice.createDouble("rate_x", Direction.kInput, 0.0);
