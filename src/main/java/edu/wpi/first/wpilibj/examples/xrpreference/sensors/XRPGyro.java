@@ -20,7 +20,7 @@ public class XRPGyro {
   private double m_angleYOffset;
   private double m_angleZOffset;
 
-  /** Create a new RomiGyro. */
+  /** Create a new XRPGyro. */
   public XRPGyro() {
     SimDevice gyroSimDevice = SimDevice.create("Gyro:XRPGyro");
     if (gyroSimDevice != null) {

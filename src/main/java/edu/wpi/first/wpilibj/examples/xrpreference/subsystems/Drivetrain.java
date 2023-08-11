@@ -17,12 +17,12 @@ public class Drivetrain extends Subsystem {
   private static final double kCountsPerRevolution = kCountsPerMotorShaftRev * kGearRatio; // 585.0
   private static final double kWheelDiameterInch = 2.3622; // 60 mm
 
-  // The Romi has the left and right motors set to
-  // PWM channels 0 and 1 respectively
+  // The XRP has the left and right motors set to
+  // channels 0 and 1 respectively
   private final XRPMotor m_leftMotor = new XRPMotor(0);
   private final XRPMotor m_rightMotor = new XRPMotor(1);
 
-  // The Romi has onboard encoders that are hardcoded
+  // The XRP has onboard encoders that are hardcoded
   // to use DIO pins 4/5 and 6/7 for the left and right
   private final Encoder m_leftEncoder = new Encoder(4, 5);
   private final Encoder m_rightEncoder = new Encoder(6, 7);
@@ -30,7 +30,7 @@ public class Drivetrain extends Subsystem {
   // Set up the differential drive controller
   private final DifferentialDrive m_diffDrive = new DifferentialDrive(m_leftMotor, m_rightMotor);
 
-  // Set up the RomiGyro
+  // Set up the XRPGyro
   private final XRPGyro m_gyro = new XRPGyro();
 
   // Set up the BuiltInAccelerometer
@@ -81,7 +81,7 @@ public class Drivetrain extends Subsystem {
   /**
    * The acceleration in the X-axis.
    *
-   * @return The acceleration of the Romi along the X-axis in Gs
+   * @return The acceleration of the XRP along the X-axis in Gs
    */
   public double getAccelX() {
     return m_accelerometer.getX();
@@ -90,7 +90,7 @@ public class Drivetrain extends Subsystem {
   /**
    * The acceleration in the Y-axis.
    *
-   * @return The acceleration of the Romi along the Y-axis in Gs
+   * @return The acceleration of the XRP along the Y-axis in Gs
    */
   public double getAccelY() {
     return m_accelerometer.getY();
@@ -99,34 +99,34 @@ public class Drivetrain extends Subsystem {
   /**
    * The acceleration in the Z-axis.
    *
-   * @return The acceleration of the Romi along the Z-axis in Gs
+   * @return The acceleration of the XRP along the Z-axis in Gs
    */
   public double getAccelZ() {
     return m_accelerometer.getZ();
   }
 
   /**
-   * Current angle of the Romi around the X-axis.
+   * Current angle of the XRP around the X-axis.
    *
-   * @return The current angle of the Romi in degrees
+   * @return The current angle of the XRP in degrees
    */
   public double getGyroAngleX() {
     return m_gyro.getAngleX();
   }
 
   /**
-   * Current angle of the Romi around the Y-axis.
+   * Current angle of the XRP around the Y-axis.
    *
-   * @return The current angle of the Romi in degrees
+   * @return The current angle of the XRP in degrees
    */
   public double getGyroAngleY() {
     return m_gyro.getAngleY();
   }
 
   /**
-   * Current angle of the Romi around the Z-axis.
+   * Current angle of the XRP around the Z-axis.
    *
-   * @return The current angle of the Romi in degrees
+   * @return The current angle of the XRP in degrees
    */
   public double getGyroAngleZ() {
     return m_gyro.getAngleZ();
